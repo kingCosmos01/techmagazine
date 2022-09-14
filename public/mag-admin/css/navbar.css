@@ -1,0 +1,152 @@
+* {
+    --text-grey: #5d5d5d; 
+}
+
+.navbar {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 5px;
+    width: 79%;
+    padding: 5px;
+    background: #fff;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.navbar .nav-wrapper {
+    position: relative;
+    display: flex;
+    width: inherit;
+    height: inherit;
+    justify-content: space-between;
+}
+
+.navbar .nav-wrapper .left {
+    position: relative;
+    display: inline-flex;  
+    left: 50px;
+    top: 5px;
+}
+
+.navbar .nav-wrapper .left form input{
+    padding: 10px;
+    border: none;
+    width: 250px;
+    background: transparent;
+    border-bottom: 2px solid rgb(0, 158, 221);
+}
+.navbar .nav-wrapper .left form button.searchBtn {
+    position: relative;
+    display: inline-flex;
+    border: none;
+    width: 90px;
+    margin-left: -5px;
+    bottom: -1px;
+    padding: 10px;
+    background: rgb(4, 124, 172);
+    color: #fff;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+.navbar .nav-wrapper .left form button.searchBtn:hover {
+    border: 2px solid rgb(4, 124, 172);
+    background: none;
+    color: #000;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.navbar .nav-wrapper .right {
+    position: relative;
+    display: inline-flex;
+    width: 50%;
+    justify-content: space-evenly;
+    right: -190px;
+}
+
+.navbar .nav-wrapper .right .cta {
+    margin-left: 20px;
+}
+
+.navbar .nav-wrapper .right .notifications {
+    position: relative;
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    background: rgb(4, 124, 172);
+    justify-content: center;
+}
+.navbar .nav-wrapper .right .notifications span {
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+}
+.navbar .nav-wrapper .right .messages {
+    position: relative;
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    background: rgb(4, 124, 172);
+    justify-content: center;
+}
+.navbar .nav-wrapper .right .messages span{
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+}
+.navbar .nav-wrapper .right .admin {
+    position: relative;
+    display: inline-flex;
+    width: 150px;
+    justify-content: space-evenly;
+}
+.navbar .nav-wrapper .right .admin .admin-cta {
+    position: absolute;
+    display: none;
+    top: 50px;
+    width: 150px;
+    padding: 10px;
+    background: #f3f3f3;
+    border-radius: .3rem;
+    transform: scale(0);
+    transform-origin: 50%;
+    transition: all 500ms ease-in-out;
+}
+.navbar .nav-wrapper .right .admin .admin-cta a {
+    position: relative;
+    display: block;
+    color: #000;
+    width: inherit;
+    padding: 5px;
+    margin-top: 5px;
+}
+.navbar .nav-wrapper .right .admin .admin-cta a:hover,
+.navbar .nav-wrapper .right .admin .admin-cta a:hover,
+.navbar .nav-wrapper .right .admin .admin-cta a:hover {
+    background: #ccc;
+    
+}
+
+.navbar .nav-wrapper .right .admin p {
+    font-weight: normal;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+.navbar .nav-wrapper .right .admin p:hover {
+    color: rgb(3, 78, 90);
+}
+
+.navbar .nav-wrapper .right .admin img {
+    position: relative;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 5px;
+}

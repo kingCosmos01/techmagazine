@@ -1,0 +1,170 @@
+*{
+    --grey: #ccc;
+    --text-grey: #c7c6c6;
+}
+
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    transition: all 5000ms ease;
+}
+
+.sidebar {
+    position: fixed;
+    display: grid;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    padding: 10px;  
+    background: rgb(0, 0, 0);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+a{
+    text-decoration: none;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.sidebar .side-container .head{
+    position: relative;
+    display: block;
+    padding: 5px;
+    text-align: center;
+}
+
+.sidebar .side-container .head h4 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 18px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #fff;
+}
+
+li.no-border{
+    border: none;
+    border-bottom: none;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: var(--text-grey);
+    opacity: 0.7;
+}
+
+.sidebar .side-container .navs {
+    position: relative;
+    display: block;
+    padding: 15px;
+    /* background: rgb(81, 158, 39); */
+}
+.sidebar .side-container .navs li {
+    list-style-type: none;
+    text-transform: uppercase;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.sidebar .side-container .navs li a {
+    text-decoration: none;
+    color: #fff;
+}
+.sidebar .side-container .navs li.alone {
+    position: relative;
+    display: flex;
+    width: inherit;
+}
+.sidebar .side-container .navs li.alone a {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 5px;
+}
+
+.sidebar .side-container .navs li.grp-1 {
+    margin-top: 10px;
+}
+.sidebar .side-container .navs li.grp-1 .faint{
+    position: relative;
+    color: var(--text-grey);
+    opacity: 0.9;
+    font-size: 14px;
+}
+.sidebar .side-container .navs li.grp-1 a#catDropDownBtn {
+    position: relative;
+    display: block;
+    width: inherit;
+    margin-left: 10px;
+    margin-top: 5px;
+    padding: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+    background: #000;
+}
+.sidebar .side-container .navs li.grp-1 a#catDropDownBtn:hover {
+    background: #353535;
+}
+
+
+.sidebar .side-container .navs li.grp-1 a#postDropDownBtn {
+    position: relative;
+    display: block;
+    width: inherit;
+    margin-left: 10px;
+    top: -10px;
+    padding: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+    background: #000;
+}
+
+
+.sidebar .side-container .navs li.grp-1 a#postDropDownBtn:hover {
+    background: #353535;
+}
+
+.sidebar .side-container .navs li.grp-1 .content {
+    position: relative;
+    display: none;
+    padding: 5px;
+    left: 10px;
+    background: #151515c9;
+    border-radius: .2rem;
+    transition: display 500ms ease-in-out;
+}
+.sidebar .side-container .navs li.grp-1 .content li {
+    position: relative;
+    display: block;
+    width: 100%;
+    left: -20px;
+    padding: 3px;
+    text-align: left;
+}
+.sidebar .side-container .navs li.grp-1 .content li a{
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-size: 16px;
+}
+.sidebar .side-container .navs li.grp-1 .post-content {
+    position: relative;
+    display: none;
+    padding: 5px;
+    left: 10px;
+    background: #151515c9;
+    border-radius: .2rem;
+    transition: all 500ms ease-in-out;
+}
+.sidebar .side-container .navs li.grp-1 .post-content li {
+    position: relative;
+    display: block;
+    width: 100%;
+    left: -20px;
+    padding: 3px;
+    text-align: left;
+    list-style-type: none;
+}
+.sidebar .side-container .navs li.grp-1 .post-content li a {
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-size: 16px;
+}

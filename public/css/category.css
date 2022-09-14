@@ -1,0 +1,100 @@
+.category-container {
+    position: absolute;
+    display: block;
+    right: 50px;
+    top: 450px;
+    width: 30%;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.category-container .wrapper span.title {
+    position: relative;
+    display: block;
+    width: 120px;
+    padding: 5px;
+    background: rgb(17, 111, 219);
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.category-container .wrapper hr {
+    border: none;
+    height: 2px;
+    background: rgb(17, 111, 219);
+}
+.category-container .wrapper .category_list {
+    position: relative;
+    display: block;
+    margin-top: 5px;
+    padding: 10px;
+}
+.category-container .wrapper .category_list li{
+    position: relative;
+    display: flex;
+    list-style-type: none;
+    width: inherit;
+    margin-top: 3px;
+    justify-content: space-evenly;
+    background: #f7f4f4;
+}
+.category-container .wrapper .category_list li a{
+    position: relative;
+    text-decoration: none;
+    width: 60%;
+    padding: 5px;
+    margin-top: 3px;
+    justify-content: space-evenly;
+    color: #000f22;
+}
+.category-container .wrapper .category_list li p>span{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    padding: 5px;
+    border: 2px solid rgb(17, 111, 219);
+    text-align: center;
+    border-radius: 20px;
+    color: #000;
+    cursor: pointer;
+    animation: fillAnimation 5000ms infinite backwards;
+}
+.category-container .wrapper .category_list li p>span:hover{
+    animation-play-state: paused;
+}
+
+@keyframes fillAnimation {
+    0%{
+        background: rgb(17, 111, 219);
+        color: #ffffff;
+    }
+    50%{
+        background: transparent;
+        color: #000;
+    }
+    100%{
+        background: rgb(17, 111, 219);
+        color: #ffffff;
+    }
+}
+
+
+
+
+
+
+
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 970px) {
+    .category-container {
+        position: relative;
+        display: block;
+        width: 90vw;
+        top: 100px;
+        left: 5px;
+    }
+    
+}

@@ -1,0 +1,72 @@
+.overviewBox{
+    position: relative;
+    display: block;
+    width: 75%;
+    top: 50px;
+    left: 300px;
+    overflow: hidden;
+}
+.overviewBox .head{
+    position: relative;
+    display: inline-block;
+    min-width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    left: 50px;
+}
+.overviewBox .head h3{
+    font-weight: normal;
+    font-size: 20px;
+}
+.overviewBox .cta {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 4px;
+}
+.overviewBox .cta .navs{
+    position: relative;
+    display: flex;
+    width: inherit;
+    justify-content: center;
+}
+.overviewBox .cta .navs a{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    margin-left: 10px;
+    width: 300px;
+    padding: 20px;
+    color: #ffffff;
+}
+.overviewBox .cta .navs a:hover{
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2); 
+    transform: rotateX(20deg);
+}
+.overviewBox .cta .navs a:nth-child(1){
+    background: rgb(255, 59, 59);
+}
+.overviewBox .cta .navs a:nth-child(2){
+    background: rgb(0, 140, 158);
+}
+.overviewBox .cta .navs a:nth-child(3){
+    background: rgb(0, 158, 124);
+}
+.overviewBox .cta .navs a:nth-child(4){
+    background: rgb(255, 136, 0);
+}
+.overviewBox .cta .navs a li{
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    font-weight: normal;
+    font-size: 18px;
+    top: 30px;
+}
+.overviewBox .cta .navs a span{
+    position: relative;
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    bottom: 30px;
+}

@@ -1,0 +1,79 @@
+html {
+    --btnBlue: rgb(17, 111, 219);
+    --searchBox: rgb(0, 158, 221);
+}
+
+.newsOverlay {
+    position: fixed;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    opacity: 0.8;
+    z-index: 99;
+}
+.news_container {
+    position: fixed;
+    display: none;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    z-index: 100;
+}
+.news_container .wrapper {
+    padding: 10px;
+}
+
+.news_container .wrapper .head .NewsCloseBtn{
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.news_container .wrapper .head {
+    position: relative;
+    display: flex;
+    width: inherit;
+    padding: 10px;
+}
+.news_container .wrapper .head h4 {
+    text-transform: uppercase;
+}
+
+.news_container .wrapper .sub_form {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    padding: 5px;
+}
+.news_container .wrapper .sub_form .form-group{
+    position: relative;
+    display: inline-flex;
+}
+.news_container .wrapper .sub_form .form-group input[type='email'] {
+    padding: 10px;
+    border: none;
+    width: 220px;
+    border-bottom: 2px solid rgb(0, 158, 221);
+}
+
+.news_container .wrapper .sub_form .form-group .subBtn{
+    position: relative;
+    display: inline-block;
+    border: none;
+    padding: 5px;
+    color: #fff;
+    background: rgb(17, 111, 219);
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+}

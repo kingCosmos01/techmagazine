@@ -1,0 +1,315 @@
+.articles-box {
+    position: absolute;
+    display: block;
+    width: 70%;
+    padding: 10px;
+    top: 60px;
+    right: 3rem;
+    background: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    /* overflow: scroll; */
+}
+
+.articles-box .articles-wrapper .head {
+    position: relative;
+    display: flex;
+    width: inherit;
+    padding: 5px;
+}
+
+.articles-box .articles-wrapper .head h4{
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.articles-box .articles-wrapper .container {
+    position: relative;
+    display: block;
+    padding: 10px;
+    margin-top: 5px;
+}
+.articles-box .articles-wrapper .container .flow{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+.articles-box .articles-wrapper .container .flow thead{
+    position: relative;
+    display: flex;
+    padding: 5px;
+    background: #ccc;
+    justify-content: space-between;
+}
+.articles-box .articles-wrapper .container .flow thead th {
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 10px;
+    
+}
+.articles-box .articles-wrapper .container .flow thead th:nth-child(1) {
+    position: relative;
+    left: 10px;  
+}
+.articles-box .articles-wrapper .container .flow thead th:nth-child(2){
+    position: relative;
+    left: 3rem;
+    width: 30rem;
+}
+.articles-box .articles-wrapper .container .flow thead th:nth-child(3){
+    position: relative;
+    left: 7rem;
+}
+.articles-box .articles-wrapper .container .flow thead th:nth-child(4){
+    position: relative;
+    left: 15rem;
+}
+
+.articles-box .articles-wrapper .container .flow tbody {
+    position: relative;
+    display: block;
+    margin-top: 5px;
+    padding: 10px;
+    background: #fff;
+}
+
+.articles-box .articles-wrapper .container .flow tbody tr{
+    display: inline-flex;
+    width: 100%;
+    margin-top: 2px;
+    padding: 5px;
+    text-align: center;
+    justify-content: space-between;
+}
+.articles-box .articles-wrapper .container .flow tbody tr:nth-child(even){
+    background: #f3f3f3;
+}
+.articles-box .articles-wrapper .container .flow tbody tr td.author {
+    position: relative;
+    left: 40px;
+    color: #b4b4b4;
+}
+.articles-box .articles-wrapper .container .flow tbody tr td.cta {
+    position: relative;
+    right: 30px;
+}
+.articles-box .articles-wrapper .container .flow tbody tr td.cta a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+    justify-content: center;
+}
+.articles-box .articles-wrapper .container .flow tbody tr td.cta a.edit-btn {
+    background: rgb(24, 151, 189);
+    color: #fff;
+}
+.articles-box .articles-wrapper .container .flow tbody tr td.cta a.del-btn {
+    background: rgb(221, 27, 27);
+    color: #fff;
+}
+.articles-box .articles-wrapper .container .flow tbody tr.show-more-grp {
+   margin-top: 5px;
+}
+.articles-box .articles-wrapper .container .flow tbody tr td .show-more-btn {
+    position: relative;
+    display: block;
+    padding: 10px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    background: rgb(2, 123, 157);
+    cursor: pointer;
+}
+
+
+/* Edit Article Modal */
+.overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    opacity: .9;
+    z-index: 99;
+}
+.edit-modal {
+    position: fixed;
+    display: block;
+    min-width: 500px;
+    padding: 20px;
+    top: 10%;
+    left: 30%;
+    background: #fff;
+    border-radius: .5rem;
+    border-top: 5rem solid rgb(0, 121, 148);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2), rgba(2, 0, 0, 0.2);
+    transform: scale(0);
+    transform-origin: 50%;
+    z-index: 100;
+    transition: all 500ms ease;
+}
+
+.edit-modal .wrapper .head {
+    position: absolute;
+    display: inline-flex;
+    width: 500px;
+    top: -80px;
+    justify-content: space-between;
+}
+.edit-modal .wrapper .head h4 {
+    position: relative;
+    font-size: 22px;
+    font-weight: normal;
+    left: 20px;
+    color: rgb(255, 255, 255);
+}
+.edit-modal .wrapper .head .closeBtn {
+    position: relative;
+    font-size: 22px;
+    font-weight: bold;
+    top: 20px;
+    cursor: pointer;
+}
+
+.edit-modal .wrapper form {
+    position: relative;
+    display: block;
+    padding: 5px;
+}
+
+.edit-modal .wrapper form .input-group {
+    position: relative;
+    display: block;
+    width: inherit;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.edit-modal .wrapper form .input-group label {
+    font-size: 19px;
+    color: #5d5d5d;
+    margin-bottom: 3px;
+}
+
+.edit-modal .wrapper form .input-group input {
+    position: relative;
+    display: flex;
+    border: none;
+    width: 500px;
+    padding: 10px;
+    margin-top: 3px;
+    border-radius: 5px;
+    border: 1px solid rgba(10, 193, 221, 0.2);
+}
+.edit-modal .wrapper form .input-group textarea {
+    position: relative;
+    display: flex;
+    width: 500px;
+    padding: 5px;
+    margin-top: 3px;
+    border-radius: 5px;
+}
+
+.edit-modal .wrapper form .input-group select {
+    padding: 5px;
+    border: none;
+    width: 400px;
+    border: 1px solid rgba(10, 193, 221, 0.2);
+}
+
+.edit-modal .wrapper form .btn {
+    position: relative;
+    display: block;
+    left: 10px;
+    top: 5px;
+    border: none;
+    padding: 10px;
+    border-radius: .2rem;
+    font-weight: normal;
+    font-size: 17px;
+    color: #fff;
+    background: rgb(4, 124, 172);
+    justify-content: center;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+
+/* delete modal */
+
+.delete-modal {
+    position: fixed;
+    display: block;
+    min-width: 500px;
+    padding: 20px;
+    top: 10%;
+    left: 30%;
+    background: #fff;
+    border-radius: .5rem;
+    border-top: 5rem solid rgb(255, 0, 64);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2), rgba(2, 0, 0, 0.2);
+    transform: scale(0);
+    transform-origin: 50%;
+    z-index: 100;
+    transition: all 500ms ease;
+}
+
+.delete-modal .wrapper .head {
+    position: absolute;
+    display: inline-flex;
+    width: 500px;
+    top: -80px;
+    justify-content: space-between;
+}
+.delete-modal .wrapper .head h4 {
+    position: relative;
+    font-size: 22px;
+    font-weight: normal;
+    left: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.delete-modal .wrapper .head .closeBtn {
+    position: relative;
+    font-size: 22px;
+    font-weight: bold;
+    top: 20px;
+    cursor: pointer;
+}
+
+.delete-modal .wrapper form .btn-grp {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    justify-content: space-between;
+}
+.delete-modal .wrapper form .btn-grp .cancel-btn {
+    position: relative;
+    display: block;
+    padding: 10px;
+    width: 90px;
+    border: none;
+    color: #fff;
+    background: rgb(255, 0, 47);
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+.delete-modal .wrapper form .btn-grp .affirm-btn {
+    position: relative;
+    display: block;
+    padding: 10px;
+    width: 90px;
+    border: none;
+    color: #fff;
+    background: rgb(10, 165, 199);
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}

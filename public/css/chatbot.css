@@ -1,0 +1,41 @@
+.chatBot {
+    position: fixed;
+    display: block;
+    text-decoration: none;
+    bottom: 100px;
+    right: 40px;
+    padding: 10px;
+    background: rgb(17, 111, 219);
+    transition: all 500ms ease-in-out;
+    z-index: 9;
+    animation: round 5000ms infinite backwards;
+}
+
+.chatBot .wrapper p {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+}
+.chatBot:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2); 
+    animation-play-state: paused;  
+}
+
+@keyframes round {
+    0%{
+        background: #000;
+    }
+    40%{
+        transform: scale(0.8);
+    }
+    50%{
+        background: rgb(10, 160, 127);
+    }
+    80%{
+        transform: scale(1);
+    }
+    100%{
+        background: rgb(17, 111, 219);
+    }
+}

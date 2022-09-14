@@ -1,0 +1,74 @@
+.add-category-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 25%;
+    top: 15%;
+    min-width: 70%;
+    padding: 20px;
+
+}
+
+.add-category-container .wrapper .head{
+    width: inherit;
+    padding: 10px;
+}
+
+.add-category-container .wrapper .head h4{
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.add-category-container .wrapper .container {
+    position:relative;
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.add-category-container .wrapper .container input[name="category"] {
+    padding: 10px;
+    width: 80%;
+    border: none;
+    box-shadow: 0px 0px 1px 0px #004547;
+    border-radius: .2rem;    
+}
+
+.add-category-container .wrapper .container .submit-btn {
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+    background: rgb(0, 129, 158);
+    cursor: pointer;
+}
+
+/* ErrorGroup */
+.msg {
+    position: absolute;
+    display: block;
+    padding: 10px;
+    justify-content: center;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.msg.msg-danger {
+    background: rgb(255, 162, 182);
+    color: #710000;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.msg.msg-success {
+    background: rgb(151, 255, 147);
+    color: #007118;
+    font-weight: normal;
+    font-size: 16px;
+}

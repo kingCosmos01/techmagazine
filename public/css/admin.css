@@ -1,0 +1,730 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 500ms ease;
+}
+body{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background: #ececec;
+}
+.fixed{
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #141414;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+    z-index: 9;
+}
+.admin_nav{
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #141414;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+    z-index: 90;
+}
+.admin_nav .content{
+    position: relative;
+    display: flex;
+    left: 0;
+    width: inherit;
+    justify-content: space-between;
+}
+.admin_nav .content .left-side{
+    position: relative;
+    display: inline-flex;
+    width: 50%;
+}
+.admin_nav .content .left-side .logo{
+    position: relative;
+    display: inline-flex;
+    left: 20px;
+    height: inherit;
+}
+.admin_nav .content .left-side .logo a{
+    position: relative;
+    display: inline-flex;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    top: 10px;
+}
+.admin_nav .content .right-side{
+    position: relative;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.admin_nav .content .right-side ul>li{
+    position: relative;
+    display: inline-flex;
+    list-style-type: none;
+    margin-left: 5px;
+    top: 10px;
+    width: inherit;
+}
+.admin_nav .content .right-side ul>li>a{
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+
+
+.navTrigger{
+    position: relative;
+    display: block;
+    left: 10px;
+    top: 3px;
+    width: 30px;
+    height: 40px;
+    padding: 2px;
+    cursor: pointer;
+}
+.navTrigger:hover{
+    box-shadow: 0px 2px 3px 0px rgba(175, 171, 171, 0.2);
+}
+.navTrigger span{
+    position: relative;
+    display: block;
+    width: inherit;
+    background: rgb(255, 255, 255);
+    height: 2px;
+    margin-top: 4px;
+    border-radius: 2px;
+}
+.navTrigger span:nth-of-type(1){
+    width: 10px;
+}
+.navTrigger span:nth-of-type(2){
+    width: 20px;
+}
+
+/* aside nav */
+.aside{
+    position: fixed;
+    display: block;
+    top: 40px;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    padding: 2px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 2px 3px 0px rgba(175, 171, 171, 0.2);
+}
+hr{
+    position: relative;
+    display: block;    
+    background: #2f2b2b;
+    box-shadow: 0px 2px 3px 0px rgba(175, 171, 171, 0.2);
+    opacity: .4;
+}
+.aside .head{
+    position: relative;
+    display: flex;
+    margin-top: 5px;
+}
+.aside .head img{
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-top: 10px;
+    left: 20px;
+}
+.aside .head .group{
+    position: relative;
+    display: block;
+    width: inherit;
+    height: 40px;
+    padding: 3px;
+    top: 10px;
+    margin-left: 3px;
+}
+.aside .head .group .welcome{
+    position: relative;
+    display: flex;
+    width: 200px;
+    justify-content: center;
+}
+.aside .head .group .welcome a{
+    text-decoration: none;
+    color: #000000
+}
+.aside .head .group .welcome a,
+.aside .head .group .welcome p{
+    display: inline-flex;
+    margin-top: 10px;
+}
+.aside .head .group .welcome a>h3{
+    color: #000000;
+    font-weight: bold;
+    font-size: 17px;
+}
+.aside .head .group .welcome p{
+    color: #000000;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.aside .head .group p>span{
+    position: relative;
+    display: inline-flex;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgb(0, 194, 48);
+}
+.aside .links {
+    position: relative;
+    text-align: left;
+    justify-content: center;
+    background: #ffffff;
+}
+.aside .links h3{
+    font-size: 18px;
+    font-weight: normal;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.aside .links ul>li{
+    position: relative;
+    display:  block;
+    padding: 2px;
+    width: inherit;
+    padding: 10px;
+
+}
+.aside .links ul>li:hover{
+    background: #cccccc;
+}
+.aside .links ul>li>a{
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 10px 20px;
+    font-weight: normal;
+    text-align: center;
+}
+.aside .links ul>li:active,
+.aside .links ul>li:focus{
+    position: relative;
+    display: block;
+    background: #007f59;
+    color: #ffffff;
+}
+
+
+/* Overview */
+
+.overviewBox{
+    position: relative;
+    display: block;
+    width: 75%;
+    top: 50px;
+    left: 300px;
+    overflow: hidden;
+}
+.overviewBox .head{
+    position: relative;
+    display: inline-block;
+    min-width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    left: 50px;
+}
+.overviewBox .head h3{
+    font-weight: normal;
+    font-size: 17px;
+}
+.overviewBox .cta {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 4px;
+}
+.overviewBox .cta .navs{
+    position: relative;
+    display: flex;
+    width: inherit;
+    justify-content: center;
+}
+.overviewBox .cta .navs a{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    margin-left: 10px;
+    width: 250px;
+    height: 120px;
+    color: #ffffff;
+    overflow: hidden;
+}
+.overviewBox .cta .navs a:hover{
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2); 
+    transform: rotateX(20deg);
+}
+.overviewBox .cta .navs a:nth-child(1){
+    background: rgb(255, 59, 59);
+}
+.overviewBox .cta .navs a:nth-child(2){
+    background: rgb(0, 140, 158);
+}
+.overviewBox .cta .navs a:nth-child(3){
+    background: rgb(0, 158, 124);
+}
+.overviewBox .cta .navs a:nth-child(4){
+    background: rgb(255, 136, 0);
+}
+.overviewBox .cta .navs a li{
+    position: relative;
+    display: block;
+    list-style-type: none;
+    font-weight: normal;
+    font-size: 18px;
+    top: 80px;
+    left: 20px;
+}
+.overviewBox .cta .navs a span{
+    position: relative;
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    left: 10px;
+    top: 5px;
+    width: inherit;
+}
+
+/* Ads Perfromance */
+.adsPerfromance{
+    position: relative;
+    display: block;
+    width: 95%;
+    top: 20px;
+    left: 40px;
+    padding: 4px;
+}
+.adsPerfromance .head{
+    position: relative;
+    display: inline-block;
+    left: 0;
+}
+.adsPerfromance .head h3{
+    font-weight: normal;
+    font-size: 18px;
+}
+.adsPerfromance .ctr-table {
+    width: 100%;
+}
+.adsPerfromance .ctr-table .ctr{
+    position: relative;
+    display: table;
+    width: inherit;
+    overflow: hidden;
+    border: 1px solid #cccccc;
+}
+.adsPerfromance .ctr-table .ctr tr{
+    position: relative;
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+}
+.adsPerfromance .ctr-table .ctr tr:hover{
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+}
+.adsPerfromance .ctr-table .ctr tr:nth-child(even){
+    background: #cccccc;
+}
+.adsPerfromance .ctr-table .ctr tr:nth-child(odd){
+    background: #fdfafa;
+}
+.adsPerfromance .ctr-table .ctr tr td{
+    position: relative;
+    display: inline-flex;
+    
+}
+.recentUsers {
+    position: relative;
+    display: block;
+    width: 95%;
+    left: 40px;
+    top: 10px;
+    margin-bottom: 20px;
+}
+.recentUsers h3{
+    position: relative;
+    display: inline-block;
+    width: inherit;
+    font-weight: normal;
+    font-size: 18px;
+    left: 10px;
+    padding: 5px;
+}
+.recentUsers ul li{
+    position: relative;
+    display: block;
+    width: inherit;
+    padding: 5px;
+    border: 1px solid #cccccc;
+}
+.recentUsers ul li:hover{
+    background: #cccccc;
+}
+.recentUsers ul li img{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    border-radius: 50%;
+}
+.recentUsers ul li p{
+    position: relative;
+    display: inline-block;
+    left: 55px;
+    top: -35px;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+}
+.recentUsers ul li span{
+    position: relative;
+    display: inline-block;
+    left: -100px;
+    top: -15px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #3d3d3d;
+}
+.recentUsers .btn{
+    position: relative;
+    display: block;
+    width: 120px;
+    padding: 10px;
+    border: none;
+    color: #ffffff;
+    margin: 8px;
+    background: linear-gradient(to top right, rgb(0, 120, 141), rgb(1, 167, 111));
+    cursor: pointer;
+    border-radius: 0px 5px 5px 5px;
+}
+
+
+
+.userBox{
+    position: relative;
+    width: 75%;
+    min-height: 100vh;
+    top: 50px;
+    left: 320px;
+    background: #cccccc;
+}
+.userBox .head{
+    position: fixed;
+    display: inline-flex;
+    width: 74%;
+    padding: 10px;
+    background: #ececec;
+    justify-content: space-between;
+    z-index: 3;
+}
+.userBox .head h3{
+    position: relative;
+    font-weight: normal;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.userBox .head>.cta{
+    display: flex;
+    margin-right: 10px;
+}
+.userBox .head>.cta ul li{
+    position: relative;
+    display: inline-flex;
+    list-style-type: none; 
+    cursor: pointer;
+}
+.userBox .head>.cta ul li:hover{
+    transform: scale(0.9);
+}
+.btn{
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(0.98);
+}
+li.btn-blue{
+    background: rgb(1, 123, 160);
+    color: #ffffff;
+    padding: 10px;
+}
+li.btn-orange{
+    background: rgb(250, 71, 0);
+    color: #ffffff;
+    padding: 10px;
+}
+li.btn-red{
+    background: rgb(250, 0, 33);
+    color: #ffffff;
+    padding: 10px;
+}
+
+.userBox .head>.cta ul li.btn-blue{
+    background: rgb(1, 123, 160);
+    color: #ffffff;
+    padding: 10px;
+}
+.userBox .head>.cta ul li.btn-orange{
+    background: rgb(250, 71, 0);
+    color: #ffffff;
+    padding: 10px;
+}
+.userBox .head>.cta ul li.btn-red{
+    background: rgb(250, 0, 33);
+    color: #ffffff;
+    padding: 10px;
+}
+.userBox .user_wrapper {
+    position: relative;
+    background: #645d5d;
+    top: 59px;
+    padding: 10px;
+}
+.userBox .user_wrapper .content{
+    position: relative;
+    display: grid;
+}
+.userBox .user_wrapper .content .user:nth-child(even){
+    background: #d5ffe79d;
+    color: #000000;
+}
+.userBox .user_wrapper .content .user{
+    position: relative;
+    display: flex;
+    width: inherit;
+    padding: 5px;
+    background: #ffffff;
+    margin-top: 5px;
+    justify-content: space-between;
+}
+.userBox .user_wrapper .content .user .info p{
+    font-weight: bold;
+}
+.userBox .user_wrapper .content .user .info span{
+    opacity: .7;
+    font-size: 14px;
+}
+.userBox .user_wrapper .content .user .cta ul li{
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+}
+.userBox .user_wrapper .content .user .date p{
+    opacity: .7;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+/* UpdateForm */
+.updateFormOverlay{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    z-index: 0.6;
+    z-index: 998;
+}
+.updateForm{
+    display: none;
+}
+.updateForm form {
+    position: fixed;
+    display: block;
+    min-width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 28px;
+    background: #ffffff;
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+.updateForm form .head h3{
+    position: relative;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+.updateForm form .form-group{
+    position: relative;
+    display: block;
+    padding: 10px;
+    margin-top: 5px;
+    background: #cccccc;
+}
+.updateForm form .form-group label{
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.updateForm form .form-group .input-field:focus{
+    border: none;
+}
+.updateForm form .form-group .input-field{
+    position: relative;
+    display: block;
+    padding: 10px;
+    border: none;
+    width: 620px;
+    border-bottom: 2px solid rgb(250, 71, 0);
+}
+.updateForm form .form-group select{
+    position: relative;
+    display: block;
+    padding: 10px;
+    border: none;
+    width: 620px;
+    border-bottom: 2px solid rgb(250, 71, 0);
+}
+.updateForm form .cta {
+    position: relative;
+    display:  flex;
+    width: inherit;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+.updateForm form .cta .btn-red{
+    border: none;
+    background: rgb(250, 0, 33);
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+}
+.updateForm form .cta .btn-blue{
+    border: none;
+    background: rgb(1, 123, 160);
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 750px)
+{
+    .aside{
+        position: fixed;
+        display: block;
+        top: 0;
+        left: -120%;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Overview */
+    .overviewBox{
+        position: absolute;
+        display: block;
+        width: 90%;
+        top: 50px;
+        left: 15px;
+        overflow: hidden;
+    }
+    .overviewBox .head{
+        position: relative;
+        display: inline-block;
+        min-width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        left: 20px;
+    }
+    .overviewBox .head h3{
+        font-weight: normal;
+        font-size: 17px;
+    }
+    .overviewBox .cta {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 4px;
+    }
+    .overviewBox .cta .navs{
+        position: relative;
+        display: flex;
+        width: inherit;
+        justify-content: center;
+    }
+    .overviewBox .cta .navs a{
+        position: relative;
+        display: block;
+        text-decoration: none;
+        margin-left: 10px;
+        width: 220px;
+        height: 120px;
+        color: #ffffff;
+    }
+    .overviewBox .cta .navs a:hover{
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2); 
+        transform: rotateZ(10deg);
+    }
+    .overviewBox .cta .navs a:nth-child(1){
+        background: rgb(255, 59, 59);
+    }
+    .overviewBox .cta .navs a:nth-child(2){
+        background: rgb(0, 140, 158);
+    }
+    .overviewBox .cta .navs a:nth-child(3){
+        background: rgb(0, 158, 124);
+    }
+    .overviewBox .cta .navs a:nth-child(4){
+        background: rgb(255, 136, 0);
+    }
+    .overviewBox .cta .navs a li{
+        position: relative;
+        display: block;
+        list-style-type: none;
+        font-weight: bold;
+        font-size: 18px;
+        top: 80px;
+        left: 10px;
+    }
+    .overviewBox .cta .navs a span{
+        position: relative;
+        display: block;
+        font-weight: bold;
+        font-size: 20px;
+        left: 20px;
+        right: 20px;
+        text-overflow: ellipsis;
+    }
+} 

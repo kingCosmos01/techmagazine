@@ -1,0 +1,388 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 500ms ease;
+}
+
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+.social_nav {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    padding: 4px 2px;
+    background: #cccccc;
+    z-index: 99;
+}
+.social_nav .wrapper{
+    position: relative;
+    display: inline-flex;
+    width: inherit;
+    justify-content: space-between;
+}
+.social_nav .wrapper .logo {
+    position: relative;
+    display: inline;
+    padding: 10px;
+}
+.social_nav .wrapper .logo a{
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+.social_nav .wrapper .socials {
+    position: relative;
+    display: inline;
+    right: 20px;    
+    padding: 10px;
+}
+.social_nav .wrapper .socials a {
+    text-decoration: none;
+    margin-left: 5px;
+    color: #000;
+}
+.social_nav .wrapper a:hover{
+    color: rgb(4, 91, 131);
+}
+.navbar {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    padding: 12px;
+    background: #000;
+    z-index: 99;
+}
+.navbar .wrapper {
+    position: relative;
+    display: inline-flex;
+    width: inherit;
+    justify-content: space-between;
+}
+.navbar .wrapper .navs{
+    position: relative;
+    display: inline;
+}
+.navbar .wrapper .navs a{
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.active{
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    padding: 10px;
+    height: inherit;
+    justify-content: center;
+    text-align: center;
+    background: rgb(17, 111, 219);
+    color: #ffffff;
+}
+
+.navbar .wrapper .navs a.active{
+   position: relative;
+   display: inline-block;
+   width: 80px;
+   padding: 10px;
+   height: inherit;
+   justify-content: center;
+   text-align: center;
+   background: rgb(17, 111, 219);
+   color: #ffffff;
+}
+
+.navbar .wrapper .navs a.donateBtn {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ffffff;
+    background: #000000;
+    border-radius: 20px;
+}
+.navbar .wrapper .navs a.donateBtn:hover{
+    background: #ffffff;
+    color: #000;
+}
+
+.navbar .wrapper .logo a {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.navbar .wrapper .searchGroup{
+    position: relative;
+    display: block;
+    right: 50px;
+}
+.navbar .wrapper .searchGroup form {
+    display: inline-flex;
+}
+.navbar .wrapper .searchGroup form input.searchBox{
+    padding: 10px;
+    border: none;
+    width: 220px;
+    border-bottom: 2px solid rgb(0, 158, 221);
+}
+.navbar .wrapper .searchGroup form .btn-blue{
+    position: relative;
+    display: inline-block;
+    left: -2px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff;
+    background: rgb(4, 124, 172);
+    cursor: pointer;
+}
+.navbar .wrapper .navOverlay{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.692);
+    z-index: 99;
+}
+.navbar .wrapper .navTrigger{
+    position: sticky;
+    display: none;
+    top: 50px;
+    left: 10px;
+    padding: 10px;
+    cursor: pointer;
+    justify-content: center;
+    z-index: 99;
+}
+.navbar .wrapper .navTrigger span{
+    position: relative;
+    display: none;
+    width: 40px;
+    height: 5px;
+    background: #ffffff;
+    margin-top: 5px;
+    line-height: 40px;
+}
+.navbar .wrapper .navContainer{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 60%;
+    height: 100vh;
+    padding: 10px;
+    background: #ffffff;
+    z-index: 99;
+}
+.navbar .wrapper .navContainer .navs{
+    display: none;
+}
+
+
+
+
+/* Mobile Responsive Queries */
+@media only screen and (max-width: 970px){
+    .social_nav {
+        position: relative;
+        display: inline-flex;
+        width: 100%;
+        background: #cccccc;
+    }
+    .social_nav .wrapper{
+        position: relative;
+        display: inline-flex;
+        width: inherit;
+        justify-content: space-between;
+    }
+    .social_nav .wrapper .logo {
+        position: relative;
+        display: inline;
+    }
+    .social_nav .wrapper .logo a{
+        position: relative;
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .social_nav .wrapper .socials {
+        position: relative;
+        display: inline-flex;
+        top: 5px;
+        right: 10px;    
+    }
+    .social_nav .wrapper .socials a {
+        text-decoration: none;
+        color: rgb(13, 110, 128);
+    }
+    .social_nav .wrapper a:hover{
+        color: rgb(4, 91, 131);
+    }
+    .navbar {
+        position: sticky;
+        display: flex;
+        width: 100vw;
+        padding: 12px;
+        background: #000;
+    }
+    .navbar .wrapper {
+        position: relative;
+        display: inline-flex;
+        width: inherit;
+        justify-content: space-between;
+    }
+    .navbar .wrapper .navs{
+        position: relative;
+        display: inline;
+    }
+    .navbar .wrapper .navs a{
+        display: none;
+    }
+    .navbar .wrapper .navs a.donateBtn{
+        display: none;
+    }
+    .navbar .wrapper .searchGroup{
+        position: relative;
+        display: flex;
+        right: 25px;
+    }
+    .navbar .wrapper .searchGroup form {
+        display: inline-flex;
+    }
+    .navbar .wrapper .searchGroup form input.searchBox{
+        padding: 10px;
+        border: none;
+        width: 200px;
+        background: transparent;
+        border-bottom: 2px solid rgb(0, 158, 221);
+    }
+    .navbar .wrapper .searchGroup form .btn-blue{
+        position: relative;
+        display: inline-block;
+        left: -2px;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: normal;
+        color: #ffffff;
+        background: rgb(4, 124, 172);
+        cursor: pointer;
+    }
+
+    /* NavTrigger and NavContainer */
+    .navbar .wrapper .navTrigger{
+        position: sticky;
+        display: block;
+        top: 50px;
+        left: 5px;
+        padding: 10px;
+        cursor: pointer;
+        justify-content: center;
+        z-index: 99;
+    }
+    .navbar .wrapper .navTrigger span{
+        position: relative;
+        display: block;
+        width: 35px;
+        height: 3px;
+        background: #ffffff;
+        margin-top: 3px;
+        line-height: 40px;
+    }
+    .navbar .wrapper .navContainer{
+        position: fixed;
+        display: block;
+        top: 0;
+        left: -100%;
+        margin: 0;
+        width: 60%;
+        height: 100%;
+        padding: 10px;
+        background: #ffffff;
+        z-index: 99;
+        overflow: hidden;
+    }
+    .navbar .wrapper .navContainer .head{
+        position: relative;
+        display: inline-flex;
+        width: 100%;
+        padding: 5px;
+        justify-content: space-between;
+        
+    }
+    .navbar .wrapper .navContainer .head h4{
+        font-weight: bold;
+        font-size: 29px;
+        vertical-align: middle;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+    .navbar .wrapper .navContainer hr{
+        position: relative;
+        border: none;
+        top: 40px;
+        height: 1px;
+        background: #000;
+        opacity: 0.7;
+    }
+    .navbar .wrapper .navContainer .head .closeBtn{
+        position: relative;
+        display: inline;
+        font-weight: bold;
+        font-size: 29px;
+        right: 10px;
+        cursor: pointer;
+    }
+    .navbar .wrapper .navContainer .navigations{
+        position: relative;
+        display: grid;
+        padding: 10px;
+        margin-top: 30px;
+    }
+    .navbar .wrapper .navContainer .navigations a{
+        text-decoration: none;
+        color: #000;
+        font-size: 25px;
+        font-weight: normal;
+        margin-top: 20px;
+        padding: 5px;
+    }
+    .navbar .wrapper .navContainer .navigations a:hover{
+        background: rgb(0, 161, 182);
+        color: #ffffff;
+    }
+    .navbar .wrapper .navContainer .navigations a.donateBtn {
+        position: relative;
+        display: inline-block;
+        padding: 5px;
+        text-align: center;
+        color: #ffffff;
+        background: #000000;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+    .navbar .wrapper .navContainer .navigations a>i{
+        font-size: 25px;
+    }
+
+
+
+} 

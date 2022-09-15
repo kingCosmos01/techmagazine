@@ -36,7 +36,7 @@
             <div class="article">
                 <img src="mag-admin/uploads/" . <?php echo $article['image']; ?> alt="">
                 <div class="title">
-                    <a href="<?php echo URLROOT; ?>/article/readmore?id=<?php echo $article['id']; ?>">
+                    <a href="<?php echo URLROOT; ?>/public/views/readmore.php?id=<?php echo $article['id']; ?>">
                         <h4><?php echo $article['title']; ?></h4>
                     </a>
                 </div>

@@ -5,6 +5,8 @@
     $readMoreOBJ = new ReadMore();
     $articles = $readMoreOBJ->getArticleById($readMoreOBJ->checkIfIdExists());
 
+    session_start();
+
 ?>
 
 
@@ -25,6 +27,12 @@
                 <img src="./path.PNG" alt="">
                 <h4><?php echo $article->title; ?></h4>
             </div>
+            <?php if(isset($_SESSION['admin-user'])): ?>
+                <div class="cta">
+                    <li><a href="http://localhost/magazine/public/views/readmore.php?id=6321a339c242b&action=edit&user=<?php echo $_SESSION['admin-user']; ?>" >Edit Article</a></li>
+                    <li><a href="http://localhost/magazine/public/views/readmore.php?id=6321a339c242b&action=delete&user=<?php echo $_SESSION['admin-user']; ?>">Delete Article</a></li>
+                </div>
+            <?php endif; ?>
             <div class="content" id="content">
                 <div class="author-grp">
                     <ul>

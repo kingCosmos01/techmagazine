@@ -25,6 +25,29 @@ body {
     background: #fff;
 }
 
+.readmore-container .wrapper .cta {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    top: 20px;
+    right: 20px;
+    background: rgb(255, 255, 255);
+    justify-content: space-between;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+    border-radius: .3rem;
+}
+
+.readmore-container .wrapper .cta li {
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+.readmore-container .wrapper .cta a {
+    text-decoration: none;
+    
+}
+
 .readmore-container .wrapper .head img {
     position: relative;
     display: flex;
